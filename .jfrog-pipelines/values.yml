@@ -4,12 +4,12 @@ gitRepo:
   branch: main
 
 appImage:
-  registry: myArtifactory                            # <-- replace with your Artifactory integration name
+  registry: rajArt                            # <-- replace with your Artifactory integration name
   #registryUrl: myartifactory.myorg.com                # <-- replace with the url to your Artifactory environment
   registryUrl: stg-repo.jfrog.info
 
 appChart:
-  sourceArtifactory: myArtifactory                   # <-- replace with your Artifactory integration name
+  sourceArtifactory: rajArt                   # <-- replace with your Artifactory integration name
 
 runtime:
   k8s_integration: my_k8s                             # <-- replace with your Kubernetes integration name
