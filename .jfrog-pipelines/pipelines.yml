@@ -48,7 +48,7 @@ pipelines:
         type: DockerPush
         configuration:
           affinityGroup: dbp_group
-          targetRepository: raj-docker-local
+          targetRepository: sam-dockerhelm-local
           integrations:
             - name: {{ .Values.appImage.registry }}
           inputSteps:
