@@ -6,7 +6,7 @@ gitRepo:
 appImage:
   registry: rajArt                            # <-- replace with your Artifactory integration name
   #registryUrl: myartifactory.myorg.com                # <-- replace with the url to your Artifactory environment
-  registryUrl: stg-repo.jfrog.info
+  registryUrl: demo.jfrog-pipelines.com
 
 appChart:
   sourceArtifactory: rajArt                   # <-- replace with your Artifactory integration name
