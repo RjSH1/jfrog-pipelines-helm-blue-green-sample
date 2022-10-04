@@ -84,9 +84,9 @@ pipelines:
           helmVersion: 3
           namespace: {{ .Values.runtime.namespace }}
           blueReleaseName: {{ .Values.runtime.blueReleaseName }}
-          blueFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/docker'"
+          blueFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/sam-sourcedocker-local'"
           greenReleaseName: {{ .Values.runtime.greenReleaseName }}
-          greenFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/docker'"
+          greenFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/sam-sourcedocker-local'"
           roleServices:
             - blueReferenceName: {{ .Values.runtime.blueReleaseName }}-app
               greenReferenceName: {{ .Values.runtime.greenReleaseName }}-app
