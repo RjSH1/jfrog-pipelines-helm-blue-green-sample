@@ -14,8 +14,8 @@ resources:
     type: Image
     configuration:
       registry: {{ .Values.appImage.registry }}
-      sourceRepository: docker
-      imageName: {{ .Values.appImage.registryUrl }}/docker/app
+      sourceRepository: sam-sourcedocker-local
+      imageName: {{ .Values.appImage.registryUrl }}/sam-sourcedocker-local/app
       imageTag: latest
       autoPull: true
 
@@ -36,7 +36,7 @@ pipelines:
           affinityGroup: dbp_group
           dockerFileLocation: app
           dockerFileName: Dockerfile
-          dockerImageName: {{ .Values.appImage.registryUrl }}/docker/app
+          dockerImageName: {{ .Values.appImage.registryUrl }}/sam-sourcedocker-local/app
           dockerImageTag: 0.0.${run_number}
           integrations:
             - name: {{ .Values.appImage.registry }}
