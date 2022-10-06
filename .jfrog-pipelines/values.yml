@@ -16,7 +16,8 @@ appChart:
 
 runtime:
   k8s_integration: my_k8s                             # <-- replace with your Kubernetes integration name
-  namespace: namespace                                # <-- replace with the name of the Kubernetes namespace where the Helm chart will be deployed
+  #namespace: namespace                                # <-- replace with the name of the Kubernetes namespace where the Helm chart will be deployed
+  namespace: pipe-master-pool
   blueReleaseName: app-blue
   greenReleaseName: app-green
   idleServiceName: app-idle
