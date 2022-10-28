@@ -8,8 +8,8 @@ appImage:
   registry: rajArt                            # <-- replace with your Artifactory integration name
   #registry: myArtifactory
   #registryUrl: myartifactory.myorg.com                # <-- replace with the url to your Artifactory environment
-  registryUrl: demo.jfrog-pipelines.com
-  #registryUrl: new10oct.jfrogdev.org
+  #registryUrl: demo.jfrog-pipelines.com
+  registryUrl: cloud27oct.jfrogdev.org
 
 appChart:
   #sourceArtifactory: myArtifactory                   # <-- replace with your Artifactory integration name
