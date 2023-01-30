@@ -9,7 +9,7 @@ appImage:
   registry: myArtifactory
   #registryUrl: myartifactory.myorg.com                # <-- replace with the url to your Artifactory environment
   #registryUrl: demo.jfrog-pipelines.com
-  registryUrl: stg-repo.jfrog.info
+  registryUrl: newenv25.jfrogdev.org
 
 appChart:
   sourceArtifactory: myArtifactory                   # <-- replace with your Artifactory integration name
