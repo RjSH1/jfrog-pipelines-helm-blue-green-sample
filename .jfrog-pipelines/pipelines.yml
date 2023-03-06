@@ -15,9 +15,9 @@ resources:
     configuration:
       registry: {{ .Values.appImage.registry }}
       #sourceRepository: sam-docker-local
-      sourceRepository: quickstart-docker-local
+      sourceRepository: test-docker-local
       #imageName: {{ .Values.appImage.registryUrl }}/sam-sourcedocker-local/app
-      imageName: {{ .Values.appImage.registryUrl }}/quickstart-docker-local/app
+      imageName: {{ .Values.appImage.registryUrl }}/test-docker-local/app
       imageTag: latest
       autoPull: true
 
@@ -39,7 +39,7 @@ pipelines:
           dockerFileLocation: app
           dockerFileName: Dockerfile
           #dockerImageName: {{ .Values.appImage.registryUrl }}/sam-sourcedocker-local/app
-          dockerImageName: {{ .Values.appImage.registryUrl }}/quickstart-docker-local/app
+          dockerImageName: {{ .Values.appImage.registryUrl }}/test-docker-local/app
           dockerImageTag: 0.0.${run_number}
           integrations:
             - name: {{ .Values.appImage.registry }}
@@ -52,7 +52,7 @@ pipelines:
         configuration:
           affinityGroup: dbp_group
           #targetRepository: sam-dockerhelm-local
-          targetRepository: quickstart-target-local
+          targetRepository: test-target-local
           integrations:
             - name: {{ .Values.appImage.registry }}
           inputSteps:
@@ -89,10 +89,10 @@ pipelines:
           namespace: {{ .Values.runtime.namespace }}
           blueReleaseName: {{ .Values.runtime.blueReleaseName }}
           #blueFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/sam-sourcedocker-local'"
-          blueFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/quickstart-docker-local'"
+          blueFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/test-docker-local'"
           greenReleaseName: {{ .Values.runtime.greenReleaseName }}
           #greenFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/sam-sourcedocker-local'"
-          greenFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/quickstart-docker-local'"
+          greenFlags: "--set image.registry='{{ .Values.appImage.registryUrl }}/test-docker-local'"
           roleServices:
             - blueReferenceName: {{ .Values.runtime.blueReleaseName }}-app
               greenReferenceName: {{ .Values.runtime.greenReleaseName }}-app
