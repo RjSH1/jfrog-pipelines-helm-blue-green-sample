@@ -9,13 +9,13 @@ appImage:
   registry: myArtifactory
   #registryUrl: myartifactory.myorg.com                # <-- replace with the url to your Artifactory environment
   #registryUrl: demo.jfrog-pipelines.com
-  registryUrl: newenv25.jfrogdev.org
+  registryUrl: pipelines.jfrog.io
 
 appChart:
   sourceArtifactory: myArtifactory                   # <-- replace with your Artifactory integration name
 
 runtime:
-  k8s_integration: s_kubernetes                            # <-- replace with your Kubernetes integration name
+  k8s_integration: myKubernetes                            # <-- replace with your Kubernetes integration name
   #namespace: namespace                                # <-- replace with the name of the Kubernetes namespace where the Helm chart will be deployed
   namespace: pipe-master-pool
   blueReleaseName: app-blue
